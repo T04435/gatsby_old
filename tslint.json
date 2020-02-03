@@ -1,0 +1,17 @@
+{
+  "defaultSeverity": "error",
+  "extends": ["tslint:recommended"],
+  "jsRules": {
+    "comment-format": true,
+    "completed-docs": true,
+    "cyclomatic-complexity": 10,
+    "max-classes-per-file": 2,
+    "quotemark": {
+      "options": "single"
+    },
+    "trailing-comma": true,
+    "triple-equals": true
+  },
+  "rules": {},
+  "rulesDirectory": []
+}
