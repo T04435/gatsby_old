@@ -13,12 +13,15 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@types/node": "^13.7.0",
     "@types/react": "^16.9.19",
     "@types/react-dom": "^16.9.5",
+    "babel-preset-react-app": "^9.1.1",
     "gatsby": "^2.19.7",
     "gatsby-plugin-tslint": "^0.0.2",
     "gatsby-plugin-typescript": "^2.1.27",
@@ -29,6 +32,13 @@
     "typescript": "^3.7.5"
   },
   "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@storybook/addon-a11y": "^5.3.12",
+    "@storybook/addon-actions": "^5.3.12",
+    "@storybook/addon-links": "^5.3.12",
+    "@storybook/addons": "^5.3.12",
+    "@storybook/react": "^5.3.12",
+    "babel-loader": "^8.0.6",
     "gatsby-plugin-scss-typescript": "^4.0.10",
     "node-sass": "^4.13.1",
     "prettier": "^1.19.1",
