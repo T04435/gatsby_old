@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { ReactChild } from 'react';
+import * as styles from './index.module.scss';
 
 interface IAppProps {
   /** App title */
@@ -12,7 +13,10 @@ interface IAppProps {
 export default class App extends React.Component<IAppProps, {}> {
   /** render component */
   render(): ReactChild {
-    return <div>Hello world!{this.props.title}</div>;
+    return (
+      <main className={styles.app}>
+        <h1>Hello world!{this.props.title}</h1>
+      </main>
+    );
   }
 }
-

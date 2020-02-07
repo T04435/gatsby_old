@@ -9,5 +9,6 @@ module.exports = {
     'gatsby-plugin-typescript',
     'gatsby-plugin-typescript-checker',
     'gatsby-plugin-tslint',
+    'gatsby-plugin-scss-typescript',
   ],
 };
