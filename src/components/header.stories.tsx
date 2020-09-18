@@ -1,6 +1,10 @@
-import { storiesOf } from '@storybook/react';
 import { Header, IHeaderProps } from './header';
 import React from 'react';
+
+export default {
+  title: 'header',
+  component: Header,
+}
 
 const headerProps: IHeaderProps = {
   logo: {
@@ -15,4 +19,4 @@ const headerProps: IHeaderProps = {
   ],
 };
 
-storiesOf('Header', module).add('Default', () => <Header {...headerProps} />);
+export const base = () => <Header {...headerProps} />;
