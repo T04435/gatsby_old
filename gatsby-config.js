@@ -11,13 +11,13 @@ module.exports = {
     'gatsby-plugin-tslint',
     'gatsby-plugin-scss-typescript',
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: 'gatsby-plugin-prefetch-google-fonts',
       options: {
         fonts: [
           {
-            family: `Roboto`,
-            subsets: [`latin`],
-            variants: [`100`,`400`, `700`]
+            family: 'Roboto',
+            subsets: ['latin'],
+            variants: ['100', '400', '700']
           },
         ],
       },
