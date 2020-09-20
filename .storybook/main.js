@@ -1,3 +1,5 @@
+import '../src/styles/global';
+
 module.exports = {
   stories: ['../**/*.stories.tsx'],
   addons: [

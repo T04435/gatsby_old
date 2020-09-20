@@ -9,7 +9,7 @@ export default {
 
 export const base = () => (
   <>
-    {Object.keys(SVG).map((svg: SVGT) => (
+    {Object.keys(SVG).map((svg: any) => (
       <Svg name={svg} key={svg} />
     ))}
   </>
