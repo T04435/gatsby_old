@@ -1,10 +1,10 @@
-import { Header, IHeaderProps } from './header';
+import Header, { IHeaderProps } from './header';
 import React from 'react';
 
 export default {
   title: 'header',
   component: Header,
-}
+};
 
 const headerProps: IHeaderProps = {
   logo: {

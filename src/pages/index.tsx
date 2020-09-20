@@ -1,7 +1,6 @@
-import * as React from 'react';
-import { ReactChild } from 'react';
+import React from 'react';
+import Header from '../components/header';
 import * as styles from './index.module.scss';
-import { Header } from '../components/header';
 
 interface IAppProps {
   /** App title */
@@ -11,22 +10,23 @@ interface IAppProps {
 /**
  * Main App
  */
-export default class App extends React.Component<IAppProps, {}> {
+const App = (props: IAppProps) => {
+  const { title } = props;
   /** render component */
-  render(): ReactChild {
-    return (
-      <>
-        <Header
-          logo={{ url: '#', alt: 'Logo' }}
-          links={[
-            { path: '/', label: 'link1' },
-            { path: '/', label: 'link2' },
-          ]}
-        />
-        <main className={styles.app}>
-          <h1>Hello world!{this.props.title}</h1>
-        </main>
-      </>
-    );
-  }
-}
+  return (
+    <>
+      <Header
+        logo={{ url: '#', alt: 'Logo' }}
+        links={[
+          { path: '/', label: 'link1' },
+          { path: '/', label: 'link2' },
+        ]}
+      />
+      <main className={styles.app}>
+        <h1>Hello world!{title}</h1>
+      </main>
+    </>
+  );
+};
+
+export default App;
