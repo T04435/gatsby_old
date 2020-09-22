@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../components/header';
 import * as styles from './index.module.scss';
+import SEO from '../components/seo/seo';
 
 interface IAppProps {
   /** App title */
@@ -15,6 +16,7 @@ const App = (props: IAppProps) => {
   /** render component */
   return (
     <>
+      <SEO title="Home" />
       <Header
         logo={{ url: '#', alt: 'Logo' }}
         links={[
