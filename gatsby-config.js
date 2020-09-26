@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 /**
  * Configure your Gatsby site with this file.
  *
@@ -57,5 +61,27 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-source-prismic`,
+      options: {
+        repositoryName: process.env.PRISMIC_REPO_NAME,
+        accessToken: process.env.PRISMIC_ACCESS_TOKEN,
+        schemas: {
+          header: require('./src/schemas/header.json'),
+          home: require('./src/schemas/home.json'),
+        },
+        prismicToolbar: true,
+        // Provide a default set of Imgix image transformations applied to
+        // Imgix-backed gatsby-image fields. These options will override the
+        // defaults set by Prismic.
+        // See: https://docs.imgix.com/apis/url
+        imageImgixParams: {
+          auto: 'compress,format',
+          fit: 'max',
+          q: 50,
+        },
+      },
+    },
+    'gatsby-plugin-layout',
   ],
 };
