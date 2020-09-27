@@ -27,6 +27,7 @@ const Header = (props: IHeaderProps) => {
               target={l.target}
               className={styles.navItem}
               key={l.path}
+              rel="noreferrer"
             >
               {l.label}
             </a>
