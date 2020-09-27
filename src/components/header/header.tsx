@@ -20,16 +20,22 @@ const Header = (props: IHeaderProps) => {
         <img src={logo.url} alt={logo.alt} loading="lazy" />
       </Link>
       <nav className={styles.nav}>
-        {links.map((l) => (
-          <Link
-            to={l.path}
-            key={l.path}
-            className={styles.navItem}
-            target={l.target}
-          >
-            {l.label}
-          </Link>
-        ))}
+        {links.map((l) =>
+          l.target ? (
+            <a
+              href={l.path}
+              target={l.target}
+              className={styles.navItem}
+              key={l.path}
+            >
+              {l.label}
+            </a>
+          ) : (
+            <Link to={l.path} key={l.path} className={styles.navItem}>
+              {l.label}
+            </Link>
+          )
+        )}
       </nav>
     </header>
   );

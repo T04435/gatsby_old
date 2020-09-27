@@ -18,7 +18,7 @@ const getHeaderPropsFromQuery = () => {
     return {
       label: link.label,
       path: link.url.url,
-      target: link.target,
+      target: link.url.target,
     };
   });
 

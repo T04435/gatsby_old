@@ -1,21 +1,47 @@
 import React from 'react';
-
-interface IAppProps {
-  /** App title */
-  title: string;
-}
+import { graphql, useStaticQuery } from 'gatsby';
+import SEO from '../components/seo/seo';
 
 /**
- * Main App
+ * App home page
  */
-const App = (props: IAppProps) => {
-  const { title } = props;
-  /** render component */
+const Home = () => {
+  const { home } = useStaticQuery(homeQuery);
+
+  const {
+    heroTitle,
+    twitterHandle,
+    ogDescription,
+    ogImage,
+    ogTitle,
+  } = home.data;
   return (
     <>
-      <h1>Hello world!{title}</h1>
+      <SEO
+        title={ogTitle}
+        description={ogDescription}
+        image={ogImage.url}
+        twitterHandle={twitterHandle}
+      />
+      <h1>{heroTitle}</h1>
     </>
   );
 };
 
-export default App;
+export default Home;
+
+const homeQuery = graphql`
+  query Home {
+    home: prismicHome {
+      data {
+        heroTitle: hero_title
+        twitterHandle: twitter_handle
+        ogDescription: og_description
+        ogImage: og_image {
+          url
+        }
+        ogTitle: og_title
+      }
+    }
+  }
+`;

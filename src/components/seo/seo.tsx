@@ -8,10 +8,11 @@ interface ISEOProps {
   description?: string;
   image?: string;
   article?: boolean;
+  twitterHandle?: string;
 }
 
 const SEO = (props: ISEOProps) => {
-  const { title, description, image, article } = props;
+  const { title, description, image, article, twitterHandle } = props;
   const { pathname } = useLocation();
   const { site } = useStaticQuery(query);
   const {
@@ -19,13 +20,14 @@ const SEO = (props: ISEOProps) => {
     defaultDescription,
     siteUrl,
     defaultImage,
-    twitterHandle,
+    defaultTwitterHandle,
   } = site.siteMetadata;
   const seo = {
     title,
     description: description || defaultDescription,
     image: image || defaultImage,
     url: `${siteUrl}${pathname}`,
+    twitterHandle: twitterHandle || defaultTwitterHandle,
   };
   return (
     <Helmet title={seo.title} titleTemplate={`%s | ${siteName}`}>
@@ -33,13 +35,13 @@ const SEO = (props: ISEOProps) => {
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       {seo.url && <meta property="og:url" content={seo.url} />}
-      {(article ? true : null) && <meta property="og:type" content="article" />}
+      {article && <meta property="og:type" content="article" />}
       {seo.title && <meta property="og:title" content={seo.title} />}
       {seo.description && (
         <meta property="og:description" content={seo.description} />
       )}
       {seo.image && <meta property="og:image" content={seo.image} />}
-      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:card" content="summary" />
       {twitterHandle && <meta name="twitter:creator" content={twitterHandle} />}
       {seo.title && <meta name="twitter:title" content={seo.title} />}
       {seo.description && (
@@ -60,7 +62,7 @@ const query = graphql`
         defaultImage: image
         siteUrl
         siteName
-        twitterHandle
+        defaultTwitterHandle: twitterHandle
       }
     }
   }
