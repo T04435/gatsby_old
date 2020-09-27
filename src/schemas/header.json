@@ -1,0 +1,35 @@
+{
+  "Main": {
+    "logo": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "logo"
+      }
+    },
+    "links": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "label": {
+            "type": "Text",
+            "config": {
+              "label": "label",
+              "placeholder": "text to show on header link"
+            }
+          },
+          "url": {
+            "type": "Link",
+            "config": {
+              "allowTargetBlank": true,
+              "label": "url",
+              "placeholder": "url label will link to"
+            }
+          }
+        },
+        "label": "links"
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "Main": {
+    "hero_title": {
+      "type": "Text",
+      "config": {
+        "label": "hero title"
+      }
+    }
+  },
+  "SEO": {
+    "og_title": {
+      "type": "Text",
+      "config": {
+        "label": "og title",
+        "placeholder": "Open Graph Title"
+      }
+    },
+    "og_description": {
+      "type": "Text",
+      "config": {
+        "label": "og description",
+        "placeholder": "Open Graph Description..."
+      }
+    },
+    "twitter_handle": {
+      "type": "Text",
+      "config": {
+        "label": "twitter handle",
+        "placeholder": "@twitter"
+      }
+    },
+    "og_image": {
+      "type": "Image",
+      "config": {
+        "constraint": {
+          "width": 1200,
+          "height": 627
+        },
+        "thumbnails": [],
+        "label": "og image"
+      }
+    }
+  }
+}
