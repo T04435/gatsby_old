@@ -8,7 +8,6 @@ export default {
 } as Meta;
 
 const headerProps: IHeaderProps = {
-  fake: '',
   logo: {
     url: 'fake',
     alt: 'indeed fake image',
