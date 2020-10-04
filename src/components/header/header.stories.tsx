@@ -1,12 +1,14 @@
-import Header, { IHeaderProps } from './header';
 import React from 'react';
+import Header, { IHeaderProps } from './header';
+import { Meta } from '@storybook/react';
 
 export default {
-  title: 'header',
+  title: 'components/header',
   component: Header,
-};
+} as Meta;
 
 const headerProps: IHeaderProps = {
+  fake: '',
   logo: {
     url: 'fake',
     alt: 'indeed fake image',

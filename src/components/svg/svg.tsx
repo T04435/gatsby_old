@@ -58,7 +58,7 @@ export type SVGT = keyof typeof SVG;
 export interface ISvgProps {
   /* A className to apply to top level container */
   className?: string;
-  // The svg to use
+  /** The svg to use */
   name: SVGT;
 }
 

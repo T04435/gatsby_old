@@ -3,14 +3,24 @@ import { Link } from 'gatsby';
 
 import styles from './header.module.scss';
 
-export interface IHeaderProps {
-  logo: {
-    url: string;
-    alt: string;
-  };
-  links: Array<{ label: string; path: string; target?: string }>;
+type Links = Array<{ label: string; path: string; target?: string }>;
+
+interface ILogo {
+  url: string;
+  alt: string;
 }
 
+/** props for the header component */
+export interface IHeaderProps {
+  /** logo to be displayed in the header */
+  logo: ILogo;
+  /** links to show in the header */
+  links: Links;
+}
+
+/**
+ * A header component which displays a logo and links
+ */
 const Header = (props: IHeaderProps) => {
   const { links, logo } = props;
 

@@ -3,7 +3,7 @@ import { SVG, Svg, SVGT } from './svg';
 import { Meta } from '@storybook/react';
 
 export default {
-  title: 'component/common/svg',
+  title: 'components/common/svg',
   component: Svg,
 } as Meta;
 
