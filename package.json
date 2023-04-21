@@ -40,7 +40,7 @@
     "@storybook/addons": "^6.0.21",
     "@storybook/react": "^6.0.21",
     "babel-loader": "^8.1.0",
-    "gatsby-plugin-scss-typescript": "^4.0.13",
+    "gatsby-plugin-scss-typescript": "^5.1.0",
     "node-sass": "^4.14.1",
     "prettier": "^2.1.2",
     "tslint": "^6.1.3",
